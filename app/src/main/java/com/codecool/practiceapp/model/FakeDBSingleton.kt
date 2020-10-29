@@ -1,14 +1,13 @@
 package com.codecool.practiceapp.model
 
-class FakeDBSingleton {
-
-
-
+class FakeDBSingleton(
+    val notes : ArrayList<Note>
+){
     companion object {
         var instance : FakeDBSingleton? = null
         fun getDatabase() : FakeDBSingleton {
             if (instance == null) {
-                instance = FakeDBSingleton()
+                instance = FakeDBSingleton(arrayListOf())
             }
             return instance!!
         }
