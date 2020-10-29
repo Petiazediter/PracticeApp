@@ -20,6 +20,7 @@ class NoteFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        TODO("Get the Note()s from the database via Koin DI")
         note_recycler.adapter = NoteRecyclerAdapter()
     }
 }
