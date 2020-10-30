@@ -4,7 +4,7 @@ class FakeDBSingleton(
     val notes : ArrayList<Note>
 ){
     companion object {
-        var instance : FakeDBSingleton? = null
+        private var instance : FakeDBSingleton? = null
         fun getDatabase() : FakeDBSingleton {
             if (instance == null) {
                 instance = FakeDBSingleton(arrayListOf())
